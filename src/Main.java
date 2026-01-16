@@ -21,8 +21,6 @@ public class Main {
         int deliveryDistance = 55;
         int deliveryTime = serchdeliveryTime(deliveryDistance);
         System.out.println(deliveryTime);
-
-
     }
     //Задание 1
     public static boolean searchVersion(int year) {
