@@ -18,7 +18,7 @@ public class Main {
         int deliveryTime = serchDeliveryTime(deliveryDistance);
         System.out.println(deliveryTime);
     }
-    //Задание 1
+    //Задание 1 название изменено
     public static String determineLeapYearStatus(int year) {
         if (year >= 1584 && (year % 4 == 0 && year % 100 != 0) || (year % 400 == 0)) {
             return year + " год является високосным";
@@ -41,7 +41,7 @@ public class Main {
             return("Что-то пошло не так");
         }
     }
-    //Задание 3
+    //Задание 3 переделано
     public static int serchDeliveryTime(int distance) {
         int days = 1;
         if (distance > 100) {
