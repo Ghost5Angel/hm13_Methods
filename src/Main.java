@@ -4,12 +4,8 @@ public class Main {
     public static void main(String[] args) {
         System.out.println("Задание 1");
         int year = 1023;
-        boolean leapYear = searchVersion(year);
-        if (leapYear) {
-            System.out.println(year + " год является високосным");
-        } else {
-            System.out.println(year + " год не является високосным");
-        }
+        String leapYear = determineLeapYearStatus(year);
+        System.out.println(leapYear);
 
         System.out.println("Задание 2");
         int clientOS = 1;
@@ -19,15 +15,15 @@ public class Main {
 
         System.out.println("Задание 3");
         int deliveryDistance = 55;
-        int deliveryTime = serchdeliveryTime(deliveryDistance);
+        int deliveryTime = serchDeliveryTime(deliveryDistance);
         System.out.println(deliveryTime);
     }
     //Задание 1
-    public static boolean searchVersion(int year) {
+    public static String determineLeapYearStatus(int year) {
         if (year >= 1584 && (year % 4 == 0 && year % 100 != 0) || (year % 400 == 0)) {
-            return true;
+            return year + " год является високосным";
         } else {
-            return false;
+            return year + " год не является високосным";
         }
     }
     //Задание 2
@@ -46,7 +42,7 @@ public class Main {
         }
     }
     //Задание 3
-    public static int serchdeliveryTime(int distance) {
+    public static int serchDeliveryTime(int distance) {
         int days = 1;
         if (distance > 100) {
             days = 0;
