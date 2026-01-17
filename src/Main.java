@@ -45,15 +45,14 @@ public class Main {
     public static int serchDeliveryTime(int distance) {
         int days = 1;
         if (distance > 100) {
-            days = 0;
-        } else {
-            if (distance > 20) {
-                days++;
-            }
-            if (distance > 60) {
-                days++;
-            }
+            return 0;
         }
-        return (days);
+        if (distance > 20) {
+            days++;
+        }
+        if (distance > 60) {
+            days++;
+        }
+        return days;
     }
 }
